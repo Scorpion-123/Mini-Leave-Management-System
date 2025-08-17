@@ -1,6 +1,7 @@
 # Mini Leave Management System
 
-A full-fledged **Streamlit + SQLite3** MVP for a 50-employee startup.
+A full-fledged **Streamlit + SQLite3** MVP for a 50-employee startup.<br>
+**Project Link : https://mini-leave-management-system.streamlit.app/**
 
 ## Features
 - Add employees (name, email, department, joining date, initial leave balance)
@@ -19,13 +20,16 @@ A full-fledged **Streamlit + SQLite3** MVP for a 50-employee startup.
 - Non-positive duration protection
 
 ## How to Run
+The app need to create/use `leave_mgmt.sqlite3` in the working directory.
+- Create this folder configuration in the working directory : `.streamlit/secrets.toml`.
+- Paste the following code in the `secrets.toml` file:            
+```toml
+DB_PATH = "leave_mgmt.sqlite3"
+```
+Install Dependencies and run Streamlit Application.
 ```bash
 pip install streamlit pandas
 streamlit run app.py
-```
-The app creates/uses `leave_mgmt.sqlite3` in the working directory. To change DB path, create `.streamlit/secrets.toml`:
-```toml
-DB_PATH = "leave_mgmt.sqlite3"
 ```
 
 ## High-Level System Design
