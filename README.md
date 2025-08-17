@@ -1,9 +1,9 @@
-# Streamlit Leave Management System (Standalone)
+# Mini Leave Management System
 
 A full-fledged **Streamlit + SQLite3** MVP for a 50-employee startup.
 
 ## Features
-- Add employees (name, email, department, joining date, initial balance)
+- Add employees (name, email, department, joining date, initial leave balance)
 - Apply for leave (with validation and overlap checks)
 - Approve / Reject leave (balance deducted on approval)
 - View balance and employee leave history
@@ -25,7 +25,7 @@ streamlit run app.py
 ```
 The app creates/uses `leave_mgmt.sqlite3` in the working directory. To change DB path, create `.streamlit/secrets.toml`:
 ```toml
-DB_PATH = "path/to/leave_mgmt.sqlite3"
+DB_PATH = "leave_mgmt.sqlite3"
 ```
 
 ## High-Level System Design
